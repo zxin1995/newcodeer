@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Document</title>
+</head>
+<body>
+ 
+
+ <script>
+ /* 找出数组 arr 中重复出现过的元素
+ */
+ 
+console.log(duplicates([1, 2, 4,44,44, 4, 3, 3, 4,1, 5, 3])) ;
+function duplicates(arr) {
+    var arr1 = arr.sort();
+    var k = [];
+    for(var i = 0; i < arr1.length; i++){
+        if(arr[i]==arr1[i+1] && k.indexOf(arr1[i]) === -1){
+            k.push(arr1[i]);
+        }
+    }
+    return(k);
+}
+
+function duplicates (arr) {
+  var arr1 = arr.sort();
+  var k = [];
+  for (var i = 0; i < arr1.length; i++){
+   if( arr[i]===arr[i+1] && k.indexOf (arr[i]===-1 )){
+     k.push(arr1[i]);
+   }
+  }
+}
+ </script>
+</body>
+</html>

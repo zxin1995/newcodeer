@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <title>Document</title>
+</head>
+<body>
+<script>
+function removeWithoutCopy(arr, item){
+  // for(var i = 0; i < arr.length; i++){
+  //   if(arr[i] === item){
+  //      arr.slice(i,1);
+  //      i--;
+  //   }
+  // }
+  // console.log(arr);
+  // return arr;
+  /* 看到没len提出来了！！！！！！ */
+var len = arr.length;
+  for(var i = 0; i < len; i++){
+    if(arr[0]!==item){
+       arr.push(arr[0]);
+    }
+    arr.shift();
+  }
+  return arr;
+}
+console.log(removeWithoutCopy([1, 2, 2, 3, 4, 2, 2], 2));
+
+ </script>
+</body>
+</html>
